@@ -1,0 +1,34 @@
+[type=radio] {
+  display: none;
+}
+
+ .logos {
+   font-size: 2rem;
+   display: inline-block;
+   text-align: center;
+   margin: 0 0.5rem;
+ }
+
+ #windows:checked + label {
+   color: #0078d7;
+ }
+
+ #windows + label {
+   color: #ccc;
+ }
+
+ #psn:checked + label {
+   color: #003087;
+ }
+
+ #psn + label {
+   color: #ccc;
+ }
+
+ #xbox:checked + label {
+   color: #52b043;
+ }
+
+ #xbox + label {
+   color: #ccc;
+ }
