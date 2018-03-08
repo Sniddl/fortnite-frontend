@@ -20,3 +20,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+
+window.checkRadio = function (self) {
+  var id = self.id;
+  var radio = document.getElementById('radio-' + id);
+  radio.checked = true;
+}
