@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/stats', 'StatsController@stats');
 
 Route::get('/stats/{username}/{platform}', 'StatsController@getStats');
+
+Route::post('/stats/fresh', 'StatsController@freshStats');

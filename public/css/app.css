@@ -10058,6 +10058,16 @@ input:checked + #xbox {
   background-color: #52b043;
 }
 
+#refresh {
+  color: #4DAA57;
+}
+
+#refresh:hover,
+input:checked + #refresh {
+  color: white;
+  background-color: #52b043;
+}
+
 .no-opacity {
   display: none;
 }

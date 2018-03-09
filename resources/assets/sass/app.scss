@@ -64,6 +64,13 @@ html {
    }
  }
 
+ #refresh {
+   color: #4DAA57;
+   &:hover, input:checked + & {
+     color: white;
+     background-color: #52b043;
+   }
+ }
 .no-opacity {
   display: none;
 
