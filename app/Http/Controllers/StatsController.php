@@ -47,6 +47,5 @@ class StatsController extends Controller
       $client = new Client;
       $res = $client->request('GET', "https://fn.sniddl.com/fresh/br/$request->username/$request->platform");
       return redirect("/stats/$request->username/$request->platform");
-
     }
 }
