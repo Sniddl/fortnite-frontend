@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <h1>Can't Find Your Account?</h1>
-  <p>If you are currently a console player then it is impossible to search for your stats using your Xbox gamertag or PSN ID however, there is still a way! You will need to look up your account using youe Epic Games Acccount name.</p>
+  <p>If you are currently a console player then it is impossible to search for your stats using your Xbox gamertag or PSN ID however, there is still a way! You will need to look up your account using your Epic Games Acccount name.</p>
   <h2>How to get your Epic Account name.</h2>
   <ul>
     <li>Xbox and PS4 players can visit the <a href="https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale">Fortnite Website</li></a>

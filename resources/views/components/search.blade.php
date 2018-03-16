@@ -12,11 +12,17 @@
       <input class="platform-button" id="radio-psn" type="radio" name="platform" value="ps4">
       <button id="psn" class="btn btn-outline-secondary no-outline" type="button" onclick="checkRadio(this)"><i class="fab fa-playstation"></i></button>
     </div>
-    <input type="text" class="form-control" placeholder="Search" aria-label="" name="username" aria-describedby="basic-addon1" required>
+    <input type="text" class="form-control" value="{{ Session::get('username') }}" placeholder="Search" aria-label="" name="username" aria-describedby="basic-addon1" required>
     <div class="input-group-append">
       <button class="btn btn-outline-secondary no-outline" type="submit">Submit</button>
       </div>
     </div>
+    @if (Session::has('danger'))
+      <div class="alert alert-danger" role="alert">
+        {!! Session::get('danger') !!}
+      </div>
+
+    @endif
   </div>
 
 </form>
