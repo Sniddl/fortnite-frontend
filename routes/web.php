@@ -23,8 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/stats', 'StatsController@stats');
+Route::post('/stats', 'StatsController@search');
 
-Route::get('/stats/{username}/{platform}', 'StatsController@getStats');
-
-Route::post('/stats/fresh', 'StatsController@freshStats');
+Route::get('/stats/{platform}/{username}', 'StatsController@stats');

@@ -9,12 +9,19 @@ function percent($num) {
   return decimal($num) . "%";
 }
 
-function getTime($time) {
-  $arr = [];
-  if (!empty($time->years)) array_push($arr, "$time->years years");
-  if (!empty($time->days)) array_push($arr, "$time->days days");
-  if (!empty($time->hours)) array_push($arr, "$time->hours hours");
-  if (!empty($time->minutes)) array_push($arr, "$time->minutes minutes");
-  if (!empty($time->seconds)) array_push($arr, "$time->seconds seconds");
-  return join(" ", $arr);
+function req($object) {
+  $method = $object["method"];
+  $url = $object["url"];
+  $client = new \GuzzleHttp\Client(["http_errors"=>false]);
+  unset($object["method"]);
+  unset($object["url"]);
+  return toObject(json_decode($client->request($method, $url, $object)->getBody(), true));
+}
+
+function toObject($array) {
+    $obj = new stdClass();
+    foreach ($array as $key => $val) {
+        $obj->$key = is_array($val) ? toObject($val) : $val;
+    }
+    return $obj;
 }
