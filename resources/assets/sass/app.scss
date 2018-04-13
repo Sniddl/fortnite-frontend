@@ -10,7 +10,7 @@
 
 .navbar-laravel {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #ccc;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-weight: 400;
-  background: #f2f2f2;
+  background: #f5f8fa;
 }
 
 *, *:before, *:after {
@@ -42,9 +42,16 @@ html {
   position: relative;
 }
 
+.platform-button-wrapper button {
+    background: white;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    border-radius: 0px;
+}
+
  #windows {
    color: #0078d7;
-   &:hover, input:checked + & {
+   &.selected, &:hover, input:checked + & {
      color: white;
      background-color: #0078d7;
    }
@@ -53,7 +60,7 @@ html {
 
  #psn {
    color: #003087;
-   &:hover, input:checked + & {
+   &.selected, &:hover, input:checked + & {
      color: white;
      background-color: #003087;
    }
@@ -62,7 +69,7 @@ html {
 
  #xbox {
    color: #52b043;
-   &:hover, input:checked + & {
+   &.selected, &:hover, input:checked + & {
      color: white;
      background-color: #52b043;
    }
@@ -85,4 +92,85 @@ html {
 .no-outline, .no-outline:focus, .no-outline:active {
   outline: none !important;
   box-shadow: none !important;
+}
+
+
+.stat-big {
+  margin-bottom: $grid-gutter-width;
+  .body {
+    padding: 3rem 0;
+    border: 1px solid #e1f0fd;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.27);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    font-family: sans-serif;
+    line-height: 0rem;
+    position: relative;
+    overflow: hidden;
+    .rank{
+      width: 100%;
+      font-size: 0.5rem;
+      margin-bottom: -0.4rem;
+      color: #444;
+    }
+    .value {
+      width: 100%;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+      margin: 1.6rem 0;
+    }
+    .key {
+      width: 100%;
+      font-size: 0.7rem;
+      color: #222;
+    }
+    .icon {
+      font-size: 11rem;
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      color: rgba(0, 0, 0, 0.025);
+      transform: rotate(25deg);
+    }
+  }
+}
+
+
+
+.donut-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  z-index: 3;
+}
+
+.donut-ring {
+  stroke: none;
+}
+
+.donut-segment {
+  &.squad {
+    stroke: #f44336;
+  }
+  &.duo {
+    stroke: #2196f3;
+  }
+  &.solo {
+    stroke: #8bc34a;
+  }
 }

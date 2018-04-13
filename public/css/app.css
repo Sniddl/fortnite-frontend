@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", sans-serif;
+  --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -72,7 +72,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -591,8 +591,8 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0.125rem;
+  padding-left: 0.125rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -623,8 +623,8 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0.125rem;
+  padding-left: 0.125rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -635,8 +635,8 @@ pre code {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -0.125rem;
+  margin-left: -0.125rem;
 }
 
 .no-gutters {
@@ -723,8 +723,8 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0.125rem;
+  padding-left: 0.125rem;
 }
 
 .col {
@@ -5042,7 +5042,7 @@ tbody.collapse.show {
 }
 
 .card-deck .card {
-  margin-bottom: 15px;
+  margin-bottom: 0.125rem;
 }
 
 @media (min-width: 576px) {
@@ -5051,8 +5051,8 @@ tbody.collapse.show {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -0.125rem;
+    margin-left: -0.125rem;
   }
 
   .card-deck .card {
@@ -5066,9 +5066,9 @@ tbody.collapse.show {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-right: 15px;
+    margin-right: 0.125rem;
     margin-bottom: 0;
-    margin-left: 15px;
+    margin-left: 0.125rem;
   }
 }
 
@@ -5083,7 +5083,7 @@ tbody.collapse.show {
 }
 
 .card-group > .card {
-  margin-bottom: 15px;
+  margin-bottom: 0.125rem;
 }
 
 @media (min-width: 576px) {
@@ -6092,7 +6092,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6217,7 +6217,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -9996,8 +9996,7 @@ a.text-dark:focus {
 
 .navbar-laravel {
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #ccc;
 }
 
 html {
@@ -10011,7 +10010,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: 400;
-  background: #f2f2f2;
+  background: #f5f8fa;
 }
 
 *,
@@ -10032,10 +10031,18 @@ html {
   position: relative;
 }
 
+.platform-button-wrapper button {
+  background: white;
+  border: 1px solid #ccc;
+  margin-right: -1px;
+  border-radius: 0px;
+}
+
 #windows {
   color: #0078d7;
 }
 
+#windows.selected,
 #windows:hover,
 input:checked + #windows {
   color: white;
@@ -10046,6 +10053,7 @@ input:checked + #windows {
   color: #003087;
 }
 
+#psn.selected,
 #psn:hover,
 input:checked + #psn {
   color: white;
@@ -10056,6 +10064,7 @@ input:checked + #psn {
   color: #52b043;
 }
 
+#xbox.selected,
 #xbox:hover,
 input:checked + #xbox {
   color: white;
@@ -10085,5 +10094,103 @@ input:checked + #refresh {
   outline: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.stat-big {
+  margin-bottom: 0.25rem;
+}
+
+.stat-big .body {
+  padding: 3rem 0;
+  border: 1px solid #e1f0fd;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.27);
+          box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.27);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: white;
+  font-family: sans-serif;
+  line-height: 0rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-big .body .rank {
+  width: 100%;
+  font-size: 0.5rem;
+  margin-bottom: -0.4rem;
+  color: #444;
+}
+
+.stat-big .body .value {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin: 1.6rem 0;
+}
+
+.stat-big .body .key {
+  width: 100%;
+  font-size: 0.7rem;
+  color: #222;
+}
+
+.stat-big .body .icon {
+  font-size: 11rem;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.025);
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.donut-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  z-index: 3;
+}
+
+.donut-ring {
+  stroke: none;
+}
+
+.donut-segment.squad {
+  stroke: #f44336;
+}
+
+.donut-segment.duo {
+  stroke: #2196f3;
+}
+
+.donut-segment.solo {
+  stroke: #8bc34a;
 }
 

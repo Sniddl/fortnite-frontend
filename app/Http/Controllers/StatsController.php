@@ -7,17 +7,15 @@ use Illuminate\Http\Request;
 class StatsController extends Controller
 {
      public function search(Request $r) {
-       return redirect("/stats/$r->username");
+       return redirect("/stats/$r->platform/$r->username");
 
     }
 
   public function stats($platform, $username) {
     $res = req([
       "method"=> "get",
-      "url"=> "https://fn.sniddl.com/stats/$username"
+      "url"=> "https://fn.sniddl.com/stats/$platform/$username"
     ]);
-    $res->stats = $res->stats->pc;
-    $res->selected_platform = $platform;
     return view("stats", [
       "res" => $res
     ]);
